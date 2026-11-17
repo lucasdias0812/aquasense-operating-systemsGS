@@ -1,0 +1,17 @@
+[Unit]
+Description=AquaSense - Monitoramento periodico de recursos Linux
+After=network.target
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=/etc/aquasense/aquasense.conf
+ExecStart=/opt/aquasense/bin/monitor-daemon.sh
+Restart=always
+RestartSec=3
+StartLimitIntervalSec=0
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+# Configuração copiada automaticamente pelo instalador.
+# Não coloque senhas reais aqui.
+APP_PORT=8080
+APP_MODE=demo
+# Para a aplicação real: APP_MODE=dotnet e DOTNET_DLL=AquaSense.Api.dll
+DOTNET_DLL=AquaSense.Api.dll
+CPU_LIMIT=85
+MEM_LIMIT=85
+DISK_LIMIT=85
+MONITOR_INTERVAL=15
+# IP padrão via DHCP. STATIC só se souber interface, IP, gateway e DNS.
+NETWORK_MODE=dhcp
+NETWORK_INTERFACE=
+STATIC_ADDRESS=
+STATIC_GATEWAY=
+DNS_SERVERS="1.1.1.1 8.8.8.8"

@@ -1,0 +1,24 @@
+[Unit]
+Description=AquaSense - Aplicacao WEB
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=aquasense
+Group=aquasense
+WorkingDirectory=/opt/aquasense/app
+EnvironmentFile=/etc/aquasense/aquasense.conf
+ExecStart=/opt/aquasense/bin/start-app.sh
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/log/aquasense
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

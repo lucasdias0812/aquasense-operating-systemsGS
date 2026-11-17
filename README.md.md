@@ -2,7 +2,11 @@
 
 **FIAP — Global Solution 2026.2 | Operating Systems**
 
-**Integrantes:** [Inserir nomes completos e RMs antes da entrega]
+**Integrantes:** [Lucas Dias RM 555450
+Luiz Felipe RM 555074
+Fernando Alexandre RM 555045 
+Vitor Musolino RM555012
+Gabriel Vallejo RM554973]
 
 ## Visão geral
 

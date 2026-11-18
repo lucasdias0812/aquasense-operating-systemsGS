@@ -1,0 +1,98 @@
+=== MONITORAMENTO ===
+2026-11-18T00:59:32+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T00:59:48+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:00:04+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:00:20+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:00:36+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:00:52+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:01:08+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:01:24+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:01:40+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:01:56+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:02:12+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:02:28+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:02:44+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:03:01+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:03:17+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:03:33+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:03:49+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:04:05+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+2026-11-18T01:04:21+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:04:37+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:04:53+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:05:09+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:05:25+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:05:41+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:05:57+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:06:13+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:06:29+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:06:45+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:07:01+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+2026-11-18T01:07:17+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+=== TESTES DE FALHA ===
+2026-11-18T00:29:52+0000 [INFO] RECUPERACAO OK: PID antigo=670 novo=2809
+2026-11-18T00:29:53+0000 [ALERT] ALERTA CPU 0% >= 0%
+2026-11-18T00:29:53+0000 [ERROR] FALHA CONTROLADA: comando_aquasense_inexistente não existe (resultado esperado)
+=== SERVICO SYSTEMD ===
+● aquasense-monitor.service - AquaSense - Monitoramento periodico de recursos Linux
+     Loaded: loaded (/etc/systemd/system/aquasense-monitor.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-11-18 00:36:18 UTC; 31min ago
+   Main PID: 686 (bash)
+      Tasks: 2 (limit: 2263)
+     Memory: 2.3M (peak: 4.0M)
+        CPU: 1.957s
+     CGroup: /system.slice/aquasense-monitor.service
+             ├─ 686 bash /opt/aquasense/bin/monitor-daemon.sh
+             └─2782 sleep 15
+
+Nov 18 01:05:41 aquasense-linux monitor-daemon.sh[2674]: 2026-11-18T01:05:41+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:05:41 aquasense-linux aquasense[2684]: [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:05:57 aquasense-linux monitor-daemon.sh[2687]: 2026-11-18T01:05:57+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:06:13 aquasense-linux monitor-daemon.sh[2709]: 2026-11-18T01:06:13+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:06:13 aquasense-linux aquasense[2719]: [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:06:29 aquasense-linux monitor-daemon.sh[2724]: 2026-11-18T01:06:29+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:06:29 aquasense-linux aquasense[2734]: [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:06:45 aquasense-linux monitor-daemon.sh[2743]: 2026-11-18T01:06:45+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:07:01 aquasense-linux monitor-daemon.sh[2756]: 2026-11-18T01:07:01+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:07:17 aquasense-linux monitor-daemon.sh[2770]: 2026-11-18T01:07:17+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+=== LOGS DO SYSTEMD ===
+Nov 18 00:59:48 aquasense-linux monitor-daemon.sh[2380]: 2026-11-18T00:59:48+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:00:04 aquasense-linux monitor-daemon.sh[2393]: 2026-11-18T01:00:04+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:00:20 aquasense-linux monitor-daemon.sh[2410]: 2026-11-18T01:00:20+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:00:20 aquasense-linux aquasense[2420]: [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:00:36 aquasense-linux monitor-daemon.sh[2423]: 2026-11-18T01:00:36+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:00:52 aquasense-linux monitor-daemon.sh[2436]: 2026-11-18T01:00:52+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:00:52 aquasense-linux aquasense[2446]: [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:01:08 aquasense-linux monitor-daemon.sh[2449]: 2026-11-18T01:01:08+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:01:24 aquasense-linux monitor-daemon.sh[2462]: 2026-11-18T01:01:24+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:01:40 aquasense-linux monitor-daemon.sh[2476]: 2026-11-18T01:01:40+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:01:56 aquasense-linux monitor-daemon.sh[2489]: 2026-11-18T01:01:56+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:02:12 aquasense-linux monitor-daemon.sh[2502]: 2026-11-18T01:02:12+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:02:28 aquasense-linux monitor-daemon.sh[2515]: 2026-11-18T01:02:28+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:02:28 aquasense-linux aquasense[2525]: [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:02:44 aquasense-linux monitor-daemon.sh[2528]: 2026-11-18T01:02:44+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:03:01 aquasense-linux monitor-daemon.sh[2541]: 2026-11-18T01:03:01+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:03:01 aquasense-linux aquasense[2551]: [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:03:17 aquasense-linux monitor-daemon.sh[2554]: 2026-11-18T01:03:17+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:03:17 aquasense-linux aquasense[2564]: [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:03:33 aquasense-linux monitor-daemon.sh[2567]: 2026-11-18T01:03:33+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:03:49 aquasense-linux monitor-daemon.sh[2580]: 2026-11-18T01:03:49+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:03:49 aquasense-linux aquasense[2590]: [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:04:05 aquasense-linux monitor-daemon.sh[2593]: 2026-11-18T01:04:05+0000 [INFO] MONITOR cpu=0% memoria=17% disco=45%
+Nov 18 01:04:21 aquasense-linux monitor-daemon.sh[2606]: 2026-11-18T01:04:21+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:04:37 aquasense-linux monitor-daemon.sh[2619]: 2026-11-18T01:04:37+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:04:53 aquasense-linux monitor-daemon.sh[2632]: 2026-11-18T01:04:53+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:04:53 aquasense-linux aquasense[2642]: [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:05:09 aquasense-linux monitor-daemon.sh[2648]: 2026-11-18T01:05:09+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:05:25 aquasense-linux monitor-daemon.sh[2661]: 2026-11-18T01:05:25+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:05:25 aquasense-linux aquasense[2671]: [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:05:41 aquasense-linux monitor-daemon.sh[2674]: 2026-11-18T01:05:41+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:05:41 aquasense-linux aquasense[2684]: [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:05:57 aquasense-linux monitor-daemon.sh[2687]: 2026-11-18T01:05:57+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:06:13 aquasense-linux monitor-daemon.sh[2709]: 2026-11-18T01:06:13+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:06:13 aquasense-linux aquasense[2719]: [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:06:29 aquasense-linux monitor-daemon.sh[2724]: 2026-11-18T01:06:29+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:06:29 aquasense-linux aquasense[2734]: [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:06:45 aquasense-linux monitor-daemon.sh[2743]: 2026-11-18T01:06:45+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:07:01 aquasense-linux monitor-daemon.sh[2756]: 2026-11-18T01:07:01+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%
+Nov 18 01:07:17 aquasense-linux monitor-daemon.sh[2770]: 2026-11-18T01:07:17+0000 [INFO] MONITOR cpu=0% memoria=16% disco=45%

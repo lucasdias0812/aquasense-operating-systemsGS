@@ -1,0 +1,43 @@
+=== HOSTNAME ===
+ Static hostname: aquasense-linux
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: db38a07296cc4592bcff8cd65622681c
+         Boot ID: 95e5b92b88d24d8ca380d231235188aa
+  Virtualization: oracle
+Operating System: Ubuntu 24.04.5 LTS
+          Kernel: Linux 6.8.0-149-generic
+    Architecture: x86-64
+ Hardware Vendor: innotek GmbH
+  Hardware Model: VirtualBox
+Firmware Version: VirtualBox
+   Firmware Date: Fri 2006-12-01
+    Firmware Age: 19y 11month 2w 3d
+=== REDE ===
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+enp0s3           UP             10.0.2.15/24 metric 100 fd17:625c:f037:2:a00:27ff:fea7:2d/64 fe80::a00:27ff:fea7:2d/64 
+enp0s8           UP             192.168.56.20/24 fe80::a00:27ff:fef6:3383/64 
+default via 10.0.2.2 dev enp0s3 proto dhcp src 10.0.2.15 metric 100 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+10.0.2.2 dev enp0s3 proto dhcp scope link src 10.0.2.15 metric 100 
+192.168.56.0/24 dev enp0s8 proto kernel scope link src 192.168.56.20 
+=== DNS ===
+Link 2 (enp0s3)
+    Current Scopes: DNS
+         Protocols: +DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+Current DNS Server: 1.1.1.1
+       DNS Servers: 1.1.1.1 8.8.8.8 fd17:625c:f037:2::3
+        DNS Domain: home
+=== SERVICOS ===
+active
+active
+enabled
+enabled
+=== APLICACAO ===
+{
+  "projeto": "AquaSense",
+  "tipo": "DEMONSTRACAO DE INFRAESTRUTURA - NAO E A API REAL",
+  "status": "ok",
+  "data_utc": "2026-11-18T01:06:10.804580+00:00",
+  "mensagem": "Servidor Linux e servico AquaSense operacionais."
+}

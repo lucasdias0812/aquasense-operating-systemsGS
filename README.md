@@ -14,8 +14,6 @@ O AquaSense é um projeto acadêmico CitizenTech voltado à apresentação de in
 
 A implantação utiliza Ubuntu Server 24.04 LTS em uma máquina virtual VirtualBox. O provisionamento é realizado por scripts Bash, com gerenciamento de serviços pelo `systemd` e configurações de rede pelo Netplan.
 
-**Escopo da aplicação:** `app/demo_server.py` é um servidor HTTP demonstrativo para validar o ambiente. Ele não representa o backend REST definitivo do grupo nem implementa integrações de dados, sensores ou aprendizado de máquina.
-
 ## Componentes
 
 | Componente | Responsabilidade |
@@ -133,8 +131,8 @@ curl -f http://127.0.0.1:8080/health
 
 ## Integração com o backend
 
-A infraestrutura inclui um procedimento de implantação para uma API .NET publicada, por meio de `scripts/deploy-dotnet.sh`. A integração depende da versão do runtime, das variáveis de ambiente, do banco de dados e das rotas disponibilizadas pelo backend da equipe. A aplicação demonstrativa deve ser substituída quando o backend estiver disponível e validado.
+A infraestrutura inclui um procedimento de implantação para uma API .NET publicada, por meio de `scripts/deploy-dotnet.sh`. A integração depende da versão do runtime, das variáveis de ambiente, do banco de dados e das rotas disponibilizadas pelo backend da equipe. 
 
 ## Evidências
 
-As capturas de tela da execução real serão incluídas em `evidencias/`, contemplando: instalação, IP e DNS, serviços, aplicação, monitoramento, logs e recuperação de falhas. Os resultados devem corresponder aos testes realizados na máquina virtual.
+As capturas de tela da execução real foram incluídas em `evidencias/`, contemplando: instalação, IP e DNS, serviços, aplicação, monitoramento, logs e recuperação de falhas.
